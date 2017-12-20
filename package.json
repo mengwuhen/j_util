@@ -1,0 +1,27 @@
+{
+  "name": "daily_work_utils",
+  "version": "1.0.0",
+  "description": "常用的一些工具函数\r ### 日常被遗忘的小知识\r ###### js中parseFloat(第一个参数，第二个参数)中第二个参数的解释\r >parseFloat(第一个参数，10)中的10是什么意思\r >parseFloat的第二个参数表示转化的进制，10就表示转为10进制",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mengwuhen/util.git"
+  },
+  "keywords": [
+    "daily",
+    "work",
+    "summarize"
+  ],
+  "author": "shijie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mengwuhen/util/issues"
+  },
+  "homepage": "https://github.com/mengwuhen/util#readme",
+  "dependencies": {
+    "lodash": "^4.17.4"
+  }
+}
