@@ -1,10 +1,10 @@
 import _ from 'lodash'
 /* 格式化后台返回的金钱数额
-number: 表示传入的金额
-place： 保留位数默认2位
-symbol: 金额的样式 美元或者人民币  默认￥
-thounsand： 千分位的标识符  默认，
-decimal：小数点 默认.
+/number: 表示传入的金额
+/place： 保留位数默认2位
+/symbol: 金额的样式 美元或者人民币  默认￥
+/thounsand： 千分位的标识符  默认，
+/decimal：小数点 默认.
 */
 export function formatMoney(number, places, symbol, thousand, decimal) {
     number = number || 0;
@@ -63,6 +63,33 @@ export function orderObject(obj){
 	let e =_.slice(d, 0, 5) //获取排名前五的省份
 	return e
 }
+/**
+ * 根据name 获取cookie
+ * @param {string} name 
+ */
+export function getCookie(name) {
+    var arr = document.cookie.replace(/\s/g, "").split(';');
+    for (var i = 0; i < arr.length; i++) {
+        var tempArr = arr[i].split('=');
+        if (tempArr[0] == name) {
+            return decodeURIComponent(tempArr[1]);
+        }
+    }
+    return '';
+}
+
+/**
+ * 设置cookie
+ * @param {string} name 
+ * @param {string} value 
+ * @param {number} days
+ */
+export function setCookie(name, value, days) {
+    var date = new Date();
+    date.setDate(date.getDate() + days);
+    document.cookie = name + '=' + value + ';expires=' + date;
+}
+
 
 
 
