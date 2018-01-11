@@ -90,6 +90,15 @@ export function setCookie(name, value, days) {
     document.cookie = name + '=' + value + ';expires=' + date;
 }
 
+/**
+ * 格式化数字
+ */
+export function formatNumber(str) {
+	 str =	isNaN(+str) ? undefined : str
+		// 对于小数位数超过三位的会默认保留三位小数	  
+	 return (typeof str == 'object' || typeof str == 'boolean' || typeof str == 'undefined' ) ? '--' : (+str).toLocaleString('en-US') 
+	}
+
 
 
 
